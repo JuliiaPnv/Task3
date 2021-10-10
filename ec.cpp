@@ -4,10 +4,9 @@ using namespace std;
 int main()
 {
     int max, min, M, i, F;
-    setlocale(LC_ALL, "Rus");
         while (1)
         {
-            cout << "введите простое число M = ";
+            cout << "prime number M = ";
             cin >> M;
             max = 2;
             min = M - 1;
@@ -21,11 +20,11 @@ int main()
             if (max == M && min == 1)
                 break;
             else
-                cout << "число " << M << " не является простым"<<endl;
+                cout << "number " << M << " is not prime"<<endl;
         }
         while (1)
         {
-            cout << "введите число F (от 0 по " << M << ") = ";
+            cout << "enter number F (from 0 to " << M << ") = ";
             cin >> F;
             if (F >= 0 && F <= M)
                 break;
@@ -33,10 +32,10 @@ int main()
         for (i = 0; i < M; i++) 
         {
             if (i * i % M == F) {
-                cout << "Да";
+                cout << "Yes";
                 return true;
             }
         }
-        cout << "Нет";
+        cout << "No";
         return false;
 }
